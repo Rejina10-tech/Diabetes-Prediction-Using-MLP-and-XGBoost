@@ -1,0 +1,24 @@
+{% extends 'Prediction\base.html' %}
+{% load crispy_forms_tags %} 
+{% block content %}
+<div class="title-name">
+  <h1 class="text-center">Diabetes Prediction Application</h1>
+</div>
+{% if result %}
+  <div class="container result-{{ flag }}">
+      <h3>{{ name }}, Model Predicts: {{ result }} with {{ probability }} Probability</h3>
+  </div>
+{% endif %}
+<form action="{% url 'index'%}" method="POST" class="form-style">
+  {% csrf_token %}
+  <fieldset class="form-group">
+    <legend class="border-bottom mb-4">Enter the details...</legend>
+    {{ form|crispy }}
+  </fieldset>
+
+  <div class="form-group btn-predict-position">
+
+    <button class="btn btn-outline-info" type="submit">Predict</button>
+  </div>
+</form>
+{% endblock content%}

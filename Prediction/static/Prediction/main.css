@@ -1,0 +1,30 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+}
+.content-section{
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.btn-predict-position
+{
+    text-align: center;
+}
+.result-green{
+    text-align: center;
+    border-top: 3px solid #dddddd;
+    color: green;
+}
+.result-red{
+    text-align: center;
+    border-top: 3px solid #dddddd;
+    color: red;
+}
+.form-style label {
+    font-size: 18px; 
+    padding: 8px; 
+}

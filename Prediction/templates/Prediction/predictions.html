@@ -1,0 +1,38 @@
+{% extends "Prediction\base.html" %}
+{% block content %}
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Pregnancy</th>
+        <th scope="col">Glucose</th>
+        <th scope="col">Blood Pressure</th>
+        <th scope="col">Skin Thickness</th>
+        <th scope="col">Insulin</th>
+        <th scope="col">BMI</th>
+        <th scope="col">Diabetes Pedigree</th>
+        <th scope="col">Age</th>
+        <th scope="col">Result</th>
+        <th scope="col">Probability</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for instance in object_list %}
+      <tr>
+        <td>{{ instance.name }}</td>
+        <td>{{ instance.pregnancy }}</td>
+        <td>{{ instance.glucose }}</td>
+        <td>{{ instance.bloodPressure }}</td>
+        <td>{{ instance.skinThickness }}</td>
+        <td>{{ instance.insulin }}</td>
+        <td>{{ instance.bmi }}</td>
+        <td>{{ instance.diabetesPedigree }}</td>
+        <td>{{ instance.age }}</td>
+        <td>{{ instance.result}}</td>
+        <td>{{ instance.probability }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}
+
