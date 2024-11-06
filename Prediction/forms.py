@@ -16,7 +16,7 @@ class PredictForm(ModelForm):
             'insulin':'Enter your insulin level(10-350)',
             'bmi':'Enter your body mass index(10-60)',
             'diabetesPedigree':'Enter your diabetes predigree function(0.01-1.25)',
-            'age' : 'Enter your age(20-70)'
+            'age' : 'Enter your age(20-70)',
         }
 
         widgets = {}
